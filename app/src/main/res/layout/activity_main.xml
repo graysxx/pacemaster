@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <!-- Konten fragment -->
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!-- Custom liquid bottom nav -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/nav_bg"
+        android:orientation="horizontal"
+        android:elevation="16dp">
+
+        <!-- Beranda -->
+        <LinearLayout android:id="@+id/navHome"
+            style="@style/NavItem">
+            <LinearLayout android:id="@+id/badgeHome" style="@style/NavItemBadge">
+                <ImageView android:id="@+id/iconHome"
+                    android:layout_width="22dp" android:layout_height="22dp"
+                    android:src="@drawable/ic_nav_home"
+                    android:contentDescription="@string/desc_home_icon"
+                    android:layout_gravity="center_horizontal"/>
+                <TextView android:id="@+id/labelHome" android:text="@string/nav_home"
+                    style="@style/NavLabel"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Riwayat -->
+        <LinearLayout android:id="@+id/navHistory"
+            style="@style/NavItem">
+            <LinearLayout android:id="@+id/badgeHistory" style="@style/NavItemBadge">
+                <ImageView android:id="@+id/iconHistory"
+                    android:layout_width="22dp" android:layout_height="22dp"
+                    android:src="@drawable/ic_nav_history"
+                    android:contentDescription="@string/desc_history_icon"
+                    android:layout_gravity="center_horizontal"/>
+                <TextView android:id="@+id/labelHistory" android:text="@string/nav_history"
+                    style="@style/NavLabel"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Tombol Lari Tengah -->
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <!-- Glow lembut di belakang tombol -->
+            <View
+                android:layout_width="84dp"
+                android:layout_height="84dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/nav_center_glow"/>
+
+            <FrameLayout
+                android:id="@+id/navRun"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:background="@drawable/center_btn_bg"
+                android:layout_marginBottom="8dp"
+                android:elevation="8dp"
+                android:clickable="true"
+                android:focusable="true">
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_play"
+                    android:contentDescription="@string/desc_play_icon"
+                    android:paddingStart="2dp"/>
+            </FrameLayout>
+        </FrameLayout>
+
+        <!-- Progress -->
+        <LinearLayout android:id="@+id/navProgress"
+            style="@style/NavItem">
+            <LinearLayout android:id="@+id/badgeProgress" style="@style/NavItemBadge">
+                <ImageView android:id="@+id/iconProgress"
+                    android:layout_width="22dp" android:layout_height="22dp"
+                    android:src="@drawable/ic_nav_progress"
+                    android:contentDescription="@string/desc_progress_icon"
+                    android:layout_gravity="center_horizontal"/>
+                <TextView android:id="@+id/labelProgress" android:text="@string/nav_progress"
+                    style="@style/NavLabel"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Profil -->
+        <LinearLayout android:id="@+id/navProfile"
+            style="@style/NavItem">
+            <LinearLayout android:id="@+id/badgeProfile" style="@style/NavItemBadge">
+                <ImageView android:id="@+id/iconProfile"
+                    android:layout_width="22dp" android:layout_height="22dp"
+                    android:src="@drawable/ic_nav_profile"
+                    android:contentDescription="@string/desc_profile_icon"
+                    android:layout_gravity="center_horizontal"/>
+                <TextView android:id="@+id/labelProfile" android:text="@string/nav_profile"
+                    style="@style/NavLabel"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

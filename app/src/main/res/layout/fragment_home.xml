@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="52dp"
+        android:paddingBottom="110dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- HEADER -->
+        <TextView
+            android:text="@string/label_today_date"
+            android:textColor="@color/muted_fg"
+            android:textSize="11sp"
+            android:letterSpacing="0.2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="@string/label_greeting"
+            android:textColor="@color/text_primary"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- CARD TARGET MINGGUAN -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            android:background="@drawable/card_glass"
+            android:padding="20dp">
+
+            <TextView
+                android:text="@string/label_weekly_target"
+                android:textColor="@color/muted_fg"
+                android:textSize="11sp"
+                android:letterSpacing="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:baselineAligned="false"
+                    android:layout_marginTop="6dp">
+
+                    <!-- Angka km -->
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:text="@string/placeholder_weekly_distance"
+                                android:textColor="@color/text_primary"
+                                android:textSize="36sp"
+                                android:textStyle="bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:text="@string/label_weekly_goal"
+                                android:textColor="@color/muted_fg"
+                                android:textSize="16sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                        <!-- Progress bar -->
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="6dp"
+                            android:layout_marginTop="14dp"
+                            android:layout_marginEnd="24dp"
+                            android:background="@drawable/progress_track">
+                            <View
+                                android:id="@+id/progressBar"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/progress_fill"/>
+                        </FrameLayout>
+
+                        <!-- Hari dalam seminggu -->
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="24dp">
+                            <TextView android:text="@string/day_s" style="@style/DayLabel"/>
+                            <TextView android:text="@string/day_s" style="@style/DayLabel"/>
+                            <TextView android:text="@string/day_r" style="@style/DayLabel"/>
+                            <TextView android:text="@string/day_k" style="@style/DayLabel"/>
+                            <TextView android:text="@string/day_j" style="@style/DayLabel"/>
+                            <TextView android:text="@string/day_s" style="@style/DayLabel" android:textColor="@color/lime"/>
+                            <TextView android:text="@string/day_m" style="@style/DayLabel"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+            <com.example.pace.views.CircleProgressView
+                android:id="@+id/circleProgress"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:contentDescription="@string/desc_circle_progress"/>
+                </LinearLayout>
+        </LinearLayout>
+
+        <!-- 4 STAT CARDS: Streak, Pace, Kalori, Cuaca -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:layout_marginBottom="20dp">
+
+            <!-- Streak -->
+            <LinearLayout android:orientation="vertical" android:gravity="center"
+                android:layout_weight="1" android:layout_width="0dp"
+                android:layout_height="100dp" android:layout_marginEnd="8dp"
+                android:background="@drawable/card_glass" android:padding="10dp">
+                <ImageView android:layout_width="26dp" android:layout_height="26dp"
+                    android:src="@drawable/ic_stat_fire"
+                    android:contentDescription="@string/desc_streak_icon"
+                    android:layout_marginBottom="6dp"/>
+                <TextView android:text="@string/placeholder_streak" android:textColor="@color/text_primary"
+                    android:textSize="20sp" android:textStyle="bold"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="@string/label_days" android:textColor="@color/muted_fg"
+                    android:textSize="11sp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="@string/label_streak" android:textColor="@color/muted_fg"
+                    android:textSize="11sp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- Pace -->
+            <LinearLayout android:orientation="vertical" android:gravity="center"
+                android:layout_weight="1" android:layout_width="0dp"
+                android:layout_height="100dp" android:layout_marginEnd="8dp"
+                android:background="@drawable/card_glass" android:padding="10dp">
+                <ImageView android:layout_width="26dp" android:layout_height="26dp"
+                    android:src="@drawable/ic_stat_bolt"
+                    android:contentDescription="@string/desc_pace_icon"
+                    android:layout_marginBottom="6dp"/>
+                <TextView android:text="@string/placeholder_pace" android:textColor="@color/lime"
+                    android:textSize="20sp" android:textStyle="bold"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="@string/label_avg_pace_unit_home" android:textColor="@color/muted_fg"
+                    android:textSize="11sp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="@string/label_avg_pace_home" android:textColor="@color/muted_fg"
+                    android:textSize="11sp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- Kalori -->
+            <LinearLayout android:orientation="vertical" android:gravity="center"
+                android:layout_weight="1" android:layout_width="0dp"
+                android:layout_height="100dp" android:layout_marginEnd="8dp"
+                android:background="@drawable/card_glass" android:padding="10dp">
+                <ImageView android:layout_width="26dp" android:layout_height="26dp"
+                    android:src="@drawable/ic_stat_heart"
+                    android:contentDescription="@string/desc_calories_icon"
+                    android:layout_marginBottom="6dp"/>
+                <TextView android:text="@string/placeholder_calories_home" android:textColor="@color/text_primary"
+                    android:textSize="20sp" android:textStyle="bold"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="@string/label_kcal" android:textColor="@color/muted_fg"
+                    android:textSize="11sp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="@string/label_calories" android:textColor="@color/muted_fg"
+                    android:textSize="11sp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- Cuaca -->
+            <FrameLayout android:id="@+id/cardWeather"
+                android:layout_weight="1" android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:background="@drawable/card_glass"
+                android:clickable="true"
+                android:focusable="true"
+                android:clipToPadding="false">
+
+                <ImageView
+                    android:id="@+id/ivWeatherBg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:alpha="0.3"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+                    <ImageView android:id="@+id/ivWeatherIcon"
+                        android:layout_width="26dp" android:layout_height="26dp"
+                        android:src="@drawable/ic_weather_sunny"
+                        android:contentDescription="@string/desc_weather_icon"
+                        android:layout_marginBottom="6dp"/>
+                    <TextView android:id="@+id/tvWeatherTemp"
+                        android:text="@string/placeholder_temp" android:textColor="@color/text_primary"
+                        android:textSize="20sp" android:textStyle="bold"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvWeatherLabel"
+                        android:text="@string/label_weather_sunny" android:textColor="@color/muted_fg"
+                        android:textSize="11sp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="@string/label_weather" android:textColor="@color/muted_fg"
+                        android:textSize="11sp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- TOMBOL MULAI LARI dengan glow effect -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28dp">
+
+            <!-- Glow layer di belakang -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_glow"
+                android:layout_marginHorizontal="20dp"/>
+
+            <!-- Tombol sendiri -->
+            <Button
+                android:id="@+id/btnStartRun"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/btn_lime"
+                android:text="@string/btn_start_run"
+                android:textColor="@color/bg"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:drawableStart="@drawable/ic_play"
+                android:drawablePadding="14dp"
+                android:paddingHorizontal="28dp"
+                android:stateListAnimator="@null"
+                android:gravity="center"/>
+        </FrameLayout>
+
+        <!-- AKTIVITAS TERAKHIR + Lihat semua -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:layout_marginBottom="14dp">
+
+            <TextView
+                android:text="@string/label_recent_activity"
+                android:textColor="@color/text_primary"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvSeeAll"
+                android:text="@string/label_see_all"
+                android:textColor="@color/lime"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:minHeight="48dp"
+                android:minWidth="48dp"
+                android:gravity="center"
+                android:background="?attr/selectableItemBackground"/>
+        </LinearLayout>
+
+        <!-- Activity Item 1 -->
+        <LinearLayout android:orientation="horizontal" android:padding="16dp"
+            android:gravity="center_vertical" android:layout_marginBottom="10dp"
+            android:background="@drawable/card_glass"
+            android:baselineAligned="false"
+            android:layout_width="match_parent" android:layout_height="wrap_content">
+
+            <!-- Icon bulat -->
+            <FrameLayout android:layout_width="42dp" android:layout_height="42dp"
+                android:background="@drawable/icon_circle_bg"
+                android:layout_marginEnd="14dp">
+                <ImageView android:layout_width="20dp" android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/desc_run_icon"
+                    android:src="@drawable/ic_run_path"/>
+            </FrameLayout>
+
+            <LinearLayout android:orientation="vertical" android:layout_weight="1"
+                android:layout_width="0dp" android:layout_height="wrap_content">
+                <TextView android:text="@string/label_morning_run" android:textColor="@color/text_primary"
+                    android:textStyle="bold" android:textSize="14sp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="@string/label_today_time" android:textColor="@color/muted_fg"
+                    android:textSize="12sp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:gravity="end"
+                android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:text="@string/placeholder_dist_5_2_km" android:textColor="@color/text_primary"
+                    android:textStyle="bold" android:textSize="14sp" android:gravity="end"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="@string/placeholder_pace_5_14" android:textColor="@color/muted_fg"
+                    android:textSize="12sp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Activity Item 2 -->
+        <LinearLayout android:orientation="horizontal" android:padding="16dp"
+            android:gravity="center_vertical" android:layout_marginBottom="10dp"
+            android:background="@drawable/card_glass"
+            android:baselineAligned="false"
+            android:layout_width="match_parent" android:layout_height="wrap_content">
+            <FrameLayout android:layout_width="42dp" android:layout_height="42dp"
+                android:background="@drawable/icon_circle_bg"
+                android:layout_marginEnd="14dp">
+                <ImageView android:layout_width="20dp" android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/desc_run_icon"
+                    android:src="@drawable/ic_run_path"/>
+            </FrameLayout>
+            <LinearLayout android:orientation="vertical" android:layout_weight="1"
+                android:layout_width="0dp" android:layout_height="wrap_content">
+                <TextView android:text="@string/label_long_run" android:textColor="@color/text_primary"
+                    android:textStyle="bold" android:textSize="14sp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="@string/label_yesterday_time" android:textColor="@color/muted_fg"
+                    android:textSize="12sp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:gravity="end"
+                android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:text="@string/placeholder_dist_7_8_km" android:textColor="@color/text_primary"
+                    android:textStyle="bold" android:textSize="14sp" android:gravity="end"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="@string/placeholder_pace_5_27" android:textColor="@color/muted_fg"
+                    android:textSize="12sp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Activity Item 3 -->
+        <LinearLayout android:orientation="horizontal" android:padding="16dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/card_glass"
+            android:baselineAligned="false"
+            android:layout_width="match_parent" android:layout_height="wrap_content">
+            <FrameLayout android:layout_width="42dp" android:layout_height="42dp"
+                android:background="@drawable/icon_circle_bg"
+                android:layout_marginEnd="14dp">
+                <ImageView android:layout_width="20dp" android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/desc_run_icon"
+                    android:src="@drawable/ic_run_path"/>
+            </FrameLayout>
+            <LinearLayout android:orientation="vertical" android:layout_weight="1"
+                android:layout_width="0dp" android:layout_height="wrap_content">
+                <TextView android:text="@string/label_evening_run" android:textColor="@color/text_primary"
+                    android:textStyle="bold" android:textSize="14sp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="@string/label_2_days_ago_time" android:textColor="@color/muted_fg"
+                    android:textSize="12sp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:gravity="end"
+                android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:text="@string/placeholder_dist_4_1_km" android:textColor="@color/text_primary"
+                    android:textStyle="bold" android:textSize="14sp" android:gravity="end"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="@string/placeholder_pace_5_23" android:textColor="@color/muted_fg"
+                    android:textSize="12sp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

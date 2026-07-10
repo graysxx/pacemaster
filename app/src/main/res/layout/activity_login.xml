@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="64dp"
+        android:paddingBottom="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Mini logo -->
+        <FrameLayout
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:background="@drawable/logo_bg"
+            android:layout_marginBottom="32dp">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_run_path"
+                android:scaleType="fitCenter"/>
+        </FrameLayout>
+
+        <TextView
+            android:text="@string/title_welcome"
+            android:textColor="@color/text_primary"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:lineSpacingMultiplier="1.15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="@string/subtitle_login"
+            android:textColor="@color/muted_fg"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="36dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- Label EMAIL -->
+        <TextView
+            android:text="@string/label_email"
+            android:textColor="@color/muted_fg"
+            android:textSize="11sp"
+            android:letterSpacing="0.2"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- Field Email — custom background -->
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:background="@drawable/field_bg"
+            android:paddingHorizontal="20dp"
+            android:inputType="textEmailAddress"
+            android:hint="@string/hint_email"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/muted_fg"
+            android:textSize="15sp"
+            android:layout_marginBottom="16dp"
+            android:autofillHints="emailAddress" />
+
+        <!-- Label PASSWORD -->
+        <TextView
+            android:text="@string/label_password"
+            android:textColor="@color/muted_fg"
+            android:textSize="11sp"
+            android:letterSpacing="0.2"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- Field Password -->
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:background="@drawable/field_bg"
+            android:paddingHorizontal="20dp"
+            android:inputType="textPassword"
+            android:hint="@string/hint_password"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/muted_fg"
+            android:textSize="15sp"
+            android:layout_marginBottom="10dp"
+            android:autofillHints="password" />
+
+        <!-- Lupa password -->
+        <TextView
+            android:id="@+id/tvForgot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="@string/btn_forgot_password"
+            android:textColor="@color/lime"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="28dp"
+            android:layout_alignParentEnd="true"/>
+
+        <!-- Tombol MASUK — lime, teks bg, besar -->
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:background="@drawable/btn_lime"
+            android:text="@string/btn_login"
+            android:textColor="@color/bg"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.05"
+            android:stateListAnimator="@null"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Divider -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:layout_marginBottom="16dp">
+            <View android:layout_width="0dp" android:layout_height="1dp"
+                android:layout_weight="1" android:background="@color/divider"/>
+            <TextView android:text="@string/label_or" android:textColor="@color/muted_fg"
+                android:textSize="12sp" android:layout_marginHorizontal="12dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <View android:layout_width="0dp" android:layout_height="1dp"
+                android:layout_weight="1" android:background="@color/divider"/>
+        </LinearLayout>
+
+        <!-- Tombol Google -->
+        <Button
+            android:id="@+id/btnGoogle"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:background="@drawable/btn_google"
+            android:text="@string/btn_google"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:drawableStart="@drawable/ic_google"
+            android:drawablePadding="10dp"
+            android:stateListAnimator="@null"
+            android:layout_marginBottom="28dp"/>
+
+        <!-- Daftar link -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView android:text="@string/label_no_account"
+                android:textColor="@color/muted_fg" android:textSize="14sp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:id="@+id/tvRegister"
+                android:text="@string/btn_register"
+                android:textColor="@color/lime"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

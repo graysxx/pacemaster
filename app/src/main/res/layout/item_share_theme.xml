@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="120dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="8dp"
+    android:layout_marginEnd="8dp">
+
+    <FrameLayout
+        android:id="@+id/themePreview"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:background="@drawable/card_glass"
+        android:padding="2dp">
+
+        <ImageView
+            android:id="@+id/themeImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:layout_margin="4dp"/>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/themeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Pace Theme"
+        android:textColor="@color/muted_fg"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

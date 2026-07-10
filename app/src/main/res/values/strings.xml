@@ -1,0 +1,180 @@
+<resources>
+    <string name="app_name">PACE</string>
+    <string name="share_distance_format">%s km</string>
+    <string name="share_time_format">%1$sm %2$sd</string>
+    <string name="label_start">● Start</string>
+    <string name="label_finish">● Finish</string>
+    <string name="placeholder_distance_km">5.20 km</string>
+    <string name="label_morning_run">Morning Run</string>
+    <string name="label_activity_time_loc">Hari ini · 06:30 · 📍 Jakarta</string>
+    <string name="placeholder_distance">5.20</string>
+    <string name="label_distance_km">JARAK (KM)</string>
+    <string name="placeholder_pace">5:14</string>
+    <string name="label_avg_pace">PACE RATA2</string>
+    <string name="placeholder_duration">27:14</string>
+    <string name="label_duration">DURASI</string>
+    <string name="label_summary">Ringkasan</string>
+    <string name="label_split">Split</string>
+    <string name="placeholder_calories">338</string>
+    <string name="label_calories">Kalori</string>
+    <string name="placeholder_steps">6,933</string>
+    <string name="label_steps">Langkah</string>
+    <string name="placeholder_elevation">15 m</string>
+    <string name="label_elevation">Kenaikan</string>
+    <string name="placeholder_max_elevation">18 m</string>
+    <string name="label_max_elevation">Elev Maks</string>
+    <string name="label_pace">Pace</string>
+    <string name="label_min_km">min/km</string>
+    <string name="placeholder_pace_unit">5:14 /km</string>
+    <string name="label_avg_pace_small">Pace Rata2</string>
+    <string name="label_total_pace">Pace Total</string>
+    <string name="label_fastest_split">Split Cepat</string>
+    <string name="label_cadence">Kadens</string>
+    <string name="label_steps_min">langkah/mnt</string>
+    <string name="label_elevation_chart">Elevasi</string>
+    <string name="label_meter">meter</string>
+    <string name="label_km_header">KM</string>
+    <string name="label_pace_header">PACE</string>
+    <string name="label_elev_header">ELEV</string>
+    <string name="label_bar_header">BAR</string>
+    <string name="label_share_activity">Bagikan Aktivitas</string>
+    <string name="tab_pace_theme">Pace Theme</string>
+    <string name="tab_default">Default (Polos)</string>
+    <string name="btn_save_share">Simpan</string>
+    <string name="btn_add_background">+ Background</string>
+    <string name="label_text_size">Size</string>
+    <string name="hint_drag_tip">*Geser teks/gambar untuk mengatur posisi</string>
+    <string name="label_pace_caps">PACE</string>
+    <string name="label_jarak">Jarak</string>
+    <string name="label_waktu">Waktu</string>
+    <string name="label_ritme">Rata-rata Ritme</string>
+    <string name="label_kenaikan_elev">Kenaikan Elev</string>
+    <string name="label_langkah">Langkah</string>
+
+    <!-- Home Fragment Strings -->
+    <string name="label_today_date">SABTU, 5 JUL 2026</string>
+    <string name="label_greeting">Hei, Adi 👋</string>
+    <string name="label_weekly_target">TARGET MINGGUAN</string>
+    <string name="placeholder_weekly_distance">36.2</string>
+    <string name="label_weekly_goal"> / 40 km</string>
+    <string name="day_s">S</string>
+    <string name="day_r">R</string>
+    <string name="day_k">K</string>
+    <string name="day_j">J</string>
+    <string name="day_m">M</string>
+    <string name="placeholder_streak">12</string>
+    <string name="label_days">hari</string>
+    <string name="label_streak">Streak</string>
+    <string name="label_avg_pace_home">Avg Pace</string>
+    <string name="label_avg_pace_unit_home">/km</string>
+    <string name="placeholder_calories_home">847</string>
+    <string name="label_kcal">kkal</string>
+    <string name="placeholder_temp">28°</string>
+    <string name="label_weather_sunny">Cerah</string>
+    <string name="label_weather">Cuaca</string>
+    <string name="btn_start_run">Mulai Lari</string>
+    <string name="label_recent_activity">Aktivitas Terakhir</string>
+    <string name="label_see_all">Lihat semua</string>
+    <string name="label_long_run">Long Run</string>
+    <string name="label_evening_run">Evening Run</string>
+    <string name="label_today_time">Hari ini · 06:30</string>
+    <string name="label_yesterday_time">Kemarin · 07:00</string>
+    <string name="label_2_days_ago_time">2 hari lalu · 18:30</string>
+    <string name="placeholder_dist_5_2_km">5.2 km</string>
+    <string name="placeholder_dist_7_8_km">7.8 km</string>
+    <string name="placeholder_dist_4_1_km">4.1 km</string>
+    <string name="placeholder_pace_5_14">5:14/km</string>
+    <string name="placeholder_pace_5_27">5:27/km</string>
+    <string name="placeholder_pace_5_23">5:23/km</string>
+
+    <!-- Accessibility Descriptions -->
+    <string name="desc_streak_icon">Ikon Streak</string>
+    <string name="desc_pace_icon">Ikon Pace</string>
+    <string name="desc_calories_icon">Ikon Kalori</string>
+    <string name="desc_weather_icon">Ikon Cuaca</string>
+    <string name="desc_run_icon">Ikon Lari</string>
+
+    <!-- Login Activity Strings -->
+    <string name="title_welcome">Selamat\nDatang Kembali</string>
+    <string name="subtitle_login">Masuk untuk melanjutkan perjalananmu</string>
+    <string name="label_email">EMAIL</string>
+    <string name="hint_email">kamu@email.com</string>
+    <string name="label_password">PASSWORD</string>
+    <string name="hint_password">••••••••</string>
+    <string name="btn_forgot_password">Lupa password?</string>
+    <string name="btn_login">Masuk</string>
+    <string name="label_or">atau</string>
+    <string name="btn_google">  Lanjutkan dengan Google</string>
+    <string name="label_no_account">Belum punya akun? </string>
+    <string name="btn_register">Daftar</string>
+
+    <!-- Run Fragment Strings -->
+    <string name="label_gps_active">📍 GPS Aktif</string>
+    <string name="placeholder_duration_zero">00:00</string>
+    <string name="placeholder_distance_zero">0.00</string>
+    <string name="label_km_caps">KM</string>
+    <string name="placeholder_pace_empty">--:--</string>
+    <string name="label_pace_km">PACE /KM</string>
+    <string name="placeholder_zero">0</string>
+    <string name="btn_start">▶  Mulai</string>
+    <!-- Main Activity Nav Strings -->
+    <string name="nav_home">Beranda</string>
+    <string name="nav_history">Riwayat</string>
+    <string name="nav_progress">Progress</string>
+    <string name="nav_profile">Profil</string>
+    <string name="desc_play_icon">Ikon Mulai Lari</string>
+
+    <!-- Accessibility Descriptions Continued -->
+    <string name="desc_home_icon">Ikon Beranda</string>
+    <string name="desc_history_icon">Ikon Riwayat</string>
+    <string name="desc_progress_icon">Ikon Progress</string>
+    <string name="desc_profile_icon">Ikon Profil</string>
+    <!-- History Fragment Strings -->
+    <string name="title_history">Riwayat Aktivitas</string>
+    <string name="tab_this_week">Minggu ini</string>
+    <string name="tab_this_month">Bulan ini</string>
+    <string name="tab_all">Semua</string>
+    <string name="placeholder_total_distance">36.2 km</string>
+    <string name="label_total_distance">Total Jarak</string>
+    <string name="placeholder_total_time">3j 18m</string>
+    <string name="label_total_time">Total Waktu</string>
+    <string name="placeholder_pace_5_27_plain">5:27/km</string>
+    <string name="placeholder_dist_7_8_km_plain">7.8 km</string>
+    <string name="placeholder_duration_42_33">42:33</string>
+    <string name="placeholder_duration_22_07">22:07</string>
+
+    <!-- Profile Fragment Strings -->
+    <string name="placeholder_profile_name">Adi Kurniawan</string>
+    <string name="placeholder_profile_bio">Pelari Hobi · Jakarta</string>
+    <string name="placeholder_total_km_val">1.240</string>
+    <string name="label_km_total">KM TOTAL</string>
+    <string name="placeholder_activity_count">156</string>
+    <string name="label_activities">AKTIVITAS</string>
+    <string name="placeholder_level_val">42</string>
+    <string name="label_level">LEVEL</string>
+    <string name="label_edit_profile">Edit Profil</string>
+    <string name="label_settings">Pengaturan</string>
+    <string name="label_help">Bantuan</string>
+    <string name="btn_logout">Keluar</string>
+
+    <!-- Progress Fragment Strings -->
+    <string name="title_progress">Progress</string>
+    <string name="label_leaderboard">Leaderboard</string>
+    <string name="label_monthly_target">Target Bulanan</string>
+    <string name="placeholder_monthly_target_val">150 km</string>
+    <string name="placeholder_monthly_achieved">%s km tercapai</string>
+    <string name="placeholder_monthly_achieved_val">108 km tercapai</string>
+    <string name="placeholder_percentage">72%</string>
+    <string name="label_weekly_distance">Jarak Mingguan</string>
+    <string name="placeholder_month_year">Jun 2026</string>
+    <string name="label_pace_trend">Tren Pace</string>
+    <string name="label_improving">Membaik</string>
+    <string name="label_daily_consistency">Konsistensi Harian</string>
+    <string name="placeholder_full_month_year">Juni 2026</string>
+
+    <!-- Accessibility Descriptions Continued -->
+    <string name="desc_profile_picture">Foto Profil</string>
+    <string name="desc_trophy_icon">Ikon Trofi</string>
+    <string name="desc_trend_icon">Ikon Tren</string>
+    <string name="desc_circle_progress">Progres target mingguan</string>
+</resources>
